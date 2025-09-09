@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarTech Solutions - Energía Solar para un Futuro Sostenible</title>
+    <meta name="description" content="Líderes en soluciones de energía solar sostenible y eficiente. Paneles solares, instalación y mantenimiento profesional.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <div class="logo">
+                        <div class="logo__icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"/>
+                                <line x1="12" y1="1" x2="12" y2="3"/>
+                                <line x1="12" y1="21" x2="12" y2="23"/>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                <line x1="1" y1="12" x2="3" y2="12"/>
+                                <line x1="21" y1="12" x2="23" y2="12"/>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                            </svg>
+                        </div>
+                        <div class="logo__text">
+                            <h1>SolarTech</h1>
+                            <span>Solutions</span>
+                        </div>
+                    </div>
+                </div>
+                <nav class="header__nav" id="nav">
+                    <ul class="nav__list">
+                        <li><a href="#hero" class="nav__link">Inicio</a></li>
+                        <li><a href="#productos" class="nav__link">Productos</a></li>
+                        <li><a href="#servicios" class="nav__link">Servicios</a></li>
+                        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+                        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--primary quote-btn">Solicitar Cotización</button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__background">
+            <div class="hero__decorations">
+                <div class="hero__circle hero__circle--1"></div>
+                <div class="hero__circle hero__circle--2"></div>
+                <div class="hero__circle hero__circle--3"></div>
+                <div class="hero__line hero__line--1"></div>
+                <div class="hero__line hero__line--2"></div>
+            </div>
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__logo-large">
+                    <div class="hero__icon">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero__text">
+                    <h1 class="hero__title">Energía solar para un futuro sostenible</h1>
+                    <p class="hero__subtitle">Transformamos la luz solar en energía limpia y renovable para tu hogar o empresa</p>
+                    <div class="hero__actions">
+                        <button class="btn btn--primary btn--lg quote-btn">Solicitar Cotización</button>
+                        <button class="btn btn--secondary btn--lg" onclick="scrollToSection('productos')">Ver Productos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos section" id="productos">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Nuestros Productos</h2>
+                <p class="section__subtitle">Soluciones completas de energía solar para cada necesidad</p>
+            </div>
+            
+            <div class="filter__buttons">
+                <button class="filter__btn active" data-filter="todos">Todos</button>
+                <button class="filter__btn" data-filter="paneles">Paneles</button>
+                <button class="filter__btn" data-filter="kits">Kits</button>
+                <button class="filter__btn" data-filter="baterias">Baterías</button>
+                <button class="filter__btn" data-filter="accesorios">Accesorios</button>
+            </div>
+
+            <div class="products__grid" id="productsGrid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section class="servicios section" id="servicios">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Nuestros Servicios</h2>
+                <p class="section__subtitle">Soluciones integrales con el más alto estándar de calidad</p>
+            </div>
+            
+            <div class="services__grid">
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m13 2-2 2.5h3L12 7"/>
+                            <path d="M12 7V2"/>
+                            <path d="M12 7l-2 5h4l-2-5"/>
+                            <path d="m8 22 4-11 4 11"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Instalación Profesional</h3>
+                    <p class="service__description">Instalación certificada por técnicos especializados con garantía completa de servicio y funcionamiento.</p>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Mantenimiento Preventivo</h3>
+                    <p class="service__description">Programa de mantenimiento periódico para asegurar el máximo rendimiento de tu sistema solar.</p>
+                </div>
+                
+                <div class="service__card">
+                    <div class="service__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service__title">Asesoría Energética</h3>
+                    <p class="service__description">Análisis personalizado de consumo y diseño de solución solar óptima para tus necesidades específicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios Section -->
+    <section class="beneficios section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">¿Por qué elegir energía solar?</h2>
+                <p class="section__subtitle">Beneficios que marcan la diferencia</p>
+            </div>
+            
+            <div class="benefits__grid">
+                <div class="benefit__card">
+                    <div class="benefit__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit__title">Ahorro Energético</h3>
+                    <p class="benefit__description">Reduce hasta un 90% tu factura eléctrica con energía solar limpia y renovable.</p>
+                </div>
+                
+                <div class="benefit__card">
+                    <div class="benefit__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                            <path d="M8 12l2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit__title">Energía Limpia</h3>
+                    <p class="benefit__description">Contribuye al medio ambiente con energía 100% renovable y libre de emisiones.</p>
+                </div>
+                
+                <div class="benefit__card">
+                    <div class="benefit__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit__title">Soporte Técnico</h3>
+                    <p class="benefit__description">Asistencia técnica especializada las 24 horas para resolver cualquier consulta.</p>
+                </div>
+                
+                <div class="benefit__card">
+                    <div class="benefit__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                            <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                            <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                            <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit__title">Garantía Extendida</h3>
+                    <p class="benefit__description">Garantía de hasta 25 años en paneles solares y 5 años en equipos electrónicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section class="proyectos section" id="proyectos">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Proyectos Realizados</h2>
+                <p class="section__subtitle">Casos de éxito que demuestran nuestra experiencia</p>
+            </div>
+            
+            <div class="projects__grid">
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                <polyline points="9,22 9,12 15,12 15,22"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Instalación Residencial Los Dominicos</h3>
+                        <p class="project__description">Sistema solar de 6kW instalado en casa particular. Ahorro del 85% en factura eléctrica.</p>
+                    </div>
+                </div>
+                
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 21h18"/>
+                                <path d="M5 21V7l8-4v18"/>
+                                <path d="M19 21V11l-6-4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Proyecto Comercial Maipú</h3>
+                        <p class="project__description">Instalación de 50kW en edificio comercial. Reducción de costos operacionales del 70%.</p>
+                    </div>
+                </div>
+                
+                <div class="project__card">
+                    <div class="project__image">
+                        <div class="project__placeholder">
+                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect width="16" height="20" x="4" y="2" rx="2" ry="2"/>
+                                <path d="M9 22v-4h6v4"/>
+                                <path d="M8 6h.01"/>
+                                <path d="M16 6h.01"/>
+                                <path d="M12 6h.01"/>
+                                <path d="M12 10h.01"/>
+                                <path d="M12 14h.01"/>
+                                <path d="M16 10h.01"/>
+                                <path d="M16 14h.01"/>
+                                <path d="M8 10h.01"/>
+                                <path d="M8 14h.01"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Complejo Industrial Quilicura</h3>
+                        <p class="project__description">Mega proyecto de 200kW con sistema de almacenamiento. ROI en 4 años.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section class="contacto section" id="contacto">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Solicita tu Cotización</h2>
+                <p class="section__subtitle">Te contactamos para ofrecerte la mejor solución energética</p>
+            </div>
+            
+            <div class="contact__wrapper">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+56 9 1234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@solartech-solutions.cl</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__item">
+                        <div class="contact__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Av. Providencia 1234, Santiago, Chile</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contactForm">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label class="form-label" for="nombre">Nombre *</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            <span class="error-message" id="nombreError"></span>
+                        </div>
+                        <div class="form__group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label class="form-label" for="telefono">Teléfono *</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                        <span class="error-message" id="telefonoError"></span>
+                    </div>
+                    <div class="form__group">
+                        <label class="form-label" for="mensaje">Mensaje *</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                        <span class="error-message" id="mensajeError"></span>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">Enviar Cotización</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <div class="logo">
+                            <div class="logo__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="5"/>
+                                    <line x1="12" y1="1" x2="12" y2="3"/>
+                                    <line x1="12" y1="21" x2="12" y2="23"/>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                                    <line x1="1" y1="12" x2="3" y2="12"/>
+                                    <line x1="21" y1="12" x2="23" y2="12"/>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                                </svg>
+                            </div>
+                            <div class="logo__text">
+                                <h3>SolarTech Solutions</h3>
+                            </div>
+                        </div>
+                        <p>Líderes en soluciones de energía solar sostenible y eficiente</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer__links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Contacto</h4>
+                    <div class="footer__contact">
+                        <p>+56 9 1234 5678</p>
+                        <p>info@solartech-solutions.cl</p>
+                        <p>Av. Providencia 1234, Santiago, Chile</p>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4>Síguenos</h4>
+                    <div class="footer__social">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 SolarTech Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/56912345678?text=Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20soluciones%20de%20energía%20solar" 
+       class="whatsapp-float" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+        </svg>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>
